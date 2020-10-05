@@ -24,6 +24,7 @@
         font-size:2.5rem;
         
     }
+    
     }
     .btn-lg{
         width:50%;
@@ -34,6 +35,7 @@
             
             
     }
+  
     
     
     
