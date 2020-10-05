@@ -168,7 +168,7 @@
 </div>
 <div class="col-md-2 col-6">
   <div class="form-group">
-    <label for="exampleInputPassword1">Wasdroger</label>
+    <label for="exampleInputPassword1">Wasdroog</label>
     <input type="checkbox" class="form-control" id="exampleInputPassword1">
   </div>
 </div>
