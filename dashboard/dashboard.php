@@ -23,8 +23,10 @@
       width:100%;
   }
   body{
-      margin: 0;
+      padding: 0;
+    
   }
+  
 </style>
   </head>
 <body>
@@ -34,10 +36,10 @@
   <div class="container-fluid">
     <div class="row min-vh-100 flex-column flex-md-row mt-0">
         <aside class="col-12 col-md-2 p-0 bg-warning flex-shrink-1">
-            <nav class="navbar navbar-expand navbar-light font-weight-bold bg-warning flex-md-column flex-row align-items-start py-3">
+            <nav class="navbar navbar-expand navbar-light font-weight-bold bg-warning flex-column  align-items-start py-3">
               <h3 class="text-white mt-3">Dashboard</h3>
-                <div class="collapse navbar-collapse ">
-                    <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
+                <div class="collapse navbar-collapse">
+                    <ul class="flex-md-column  flex-sm-row   navbar-nav w-100 justify-content-between">
                         
                         <li class="nav-item">
                             <a class="nav-link pl-0" href="#"><i class="fas fa-user-plus"></i><span class="d-inline"> Admins</span></a>
@@ -58,7 +60,7 @@
                 </div>
             </nav>
         </aside>
-        <main class="col bg-faded py-3 flex-grow-1 bg-success">
+        <main class="col bg-faded py-3 flex-md-grow-1 bg-success">
             <h2>Dashboard</h2>
             <p>
             <h1><?php echo  '<center>'.SuccessMessage().'</center>'; ?></h1>
