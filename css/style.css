@@ -1,0 +1,208 @@
+
+#title {
+  background-color: #ffcc00;
+
+}
+
+
+h1{
+  font-family: 'Spicy Rice', cursive;
+  font-weight:bold;
+  font-size: 3.2rem;
+  line-height: 1.7;
+  color:#003300;
+
+}
+.header-foto
+{
+  width:100%;
+  height:80%;
+}
+.container-fluid
+{
+
+  padding:1% 14%;
+  position: relative;
+
+}
+
+.navbar
+{
+
+  padding: 0 0 3.5rem;
+
+
+
+
+
+}
+.nav-item
+{
+  padding: 0 18px;
+
+
+}
+.nav-link{
+font-size: 1.4rem;
+font-family: "Montserrat-light";
+  font-family: 'Spicy Rice', cursive;
+}
+/* features */
+#voorzieningen{
+  padding: 10% 15%;
+
+
+}
+
+
+.feature-box{
+  text-align: center;
+
+
+}
+.icon-features{
+  margin-bottom: 1rem;
+  color:#556B2F;
+}
+.icon-features:hover{
+  color:#ffcc00;
+}
+h3{
+  font-family: "Montserrat-Bold";
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #ffcc00;
+
+
+}
+p
+{
+  color: #8f8f8f;
+}
+/* features carousel */
+#features
+{
+background-color: #ffcc00;
+text-align: center;
+
+}
+.carousel-item{
+  padding: 7% 15%;
+
+  font-family: "Montserrat";
+
+
+}
+.carousel1-foto{
+  padding-top: 2%;
+  height:500px;
+
+}
+h2{
+  color:#556B2F;
+  font-weight:bold;
+  font-family: "Montserrat-Bold";
+  line-height: 1.5;
+  font-size:2.2rem;
+  padding:0% 20%;
+}
+
+/* overons */
+#overOns{
+  padding:8% 15%;
+  background-color: #F5FFFA;
+
+}
+.overons-text{
+  padding:1% 12%;
+  text-align: center;
+
+}
+h4{
+  color:black;
+  opacity: 0.7;
+}
+hr{
+  width:40%;
+  margin-top:0;
+}
+/* contact */
+#contact{
+  padding: 7% 15%;
+  background-color: #ffcc00;
+}
+
+.contactHref{
+  color:black;
+}
+.contact-h2{
+  font-family: 'Spicy Rice', cursive;
+  font-weight:bold;
+  font-size: 3.2rem;
+  line-height: 1.7;
+  color:#003300;
+}
+
+/* footer */
+#footer{
+  padding:5% 15%;
+  background-color: #F5FFFA;
+  text-align: center;
+}
+.footer-link{
+  padding: 2% 5%;
+    color:#556B2F;
+}
+.footer-link:hover{
+  color: #ffcc00;
+}
+.versie{
+  padding-top:5%;
+
+}
+
+.navbar-collapse.in{
+  display: block !important;
+}
+/* prijs */
+#prijs{
+  padding: 7% 6%;
+  color:black;
+  text-align: center;
+  background-color:#003300;
+}
+.cards-prijs{
+  padding: 3%;
+}
+.tarieven{
+  color: #ffcc00;
+}
+.card{
+  background-color:#daebe8;
+  font-family: "Montserrat-Bold";
+
+
+
+
+}
+.card:hover{
+  background-color: #ffcc00;
+}
+
+.card-header{
+  font-weight:bold;
+  font-family: "Montserrat-Bold";
+  font-size: 1.3rem;
+  color: #666633;
+}
+.card-text{
+  font-family:"Montserrat-Bold";
+  font-weight: bold;
+
+}
+
+/* medewerkers-admins-dashboard */
+
+.FieldInfo{
+  color: blue;
+}
