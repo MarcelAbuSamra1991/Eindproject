@@ -22,10 +22,7 @@
   #bgFoto{
       width:100%;
   }
-  body{
-      padding: 0;
-    
-  }
+
   
 </style>
   </head>
