@@ -121,7 +121,7 @@
 
 </div>
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-9">
 <div class="form-group">
   <label for="sel1">Kies je gewenste camping:</label>
   <select class="form-control" id="sel1">
@@ -131,6 +131,13 @@
     <option>Tent (kleine plaats)</option>
   </select>
 </div>
+  </div>
+<div class="col-md-3">
+<div class="form-group">
+    <label for="aantalNachten">Aantal nachten</label>
+    <input type="number" class="form-control" naam="aantalnachten" id="aantalNachten" placeholder="aantal nachten">
+  </div>
+
 </div>
 
 
