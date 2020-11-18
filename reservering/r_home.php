@@ -1,18 +1,26 @@
-  <?php include_once '../include/login_medewerker.inc.php'?>
+  <?php include_once '../include/login_medewerker.inc.php';?>
+  
+  <?php 
+   $_SESSION["TrackingURL"]= $_SERVER["PHP_SELF"];
+  varificatie();
+  ?>
+  
 
+  
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+      
       <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <script src="https://kit.fontawesome.com/5a8735a64a.js" crossorigin="anonymous"></script> <!--load all styles --> <!--load all styles icons -->
      
       <link rel="stylesheet" href="../style.medewerkers.css">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <title>Reservering omgeving</title>
       <style>
      
@@ -23,49 +31,69 @@
 /*:darkslategrey*/
 
 
-body{
+ body{
   background-image:url("../images/campingbg.jpg");
   background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
-        background-size:98.4%;
-}
+        background-size:100%;
+} 
+
 .navbar-collapse.in{
-        display: block !important;
+        display:inline-block !important;
       }
      
 
-.nav-link{
-  font-size:1.4rem;
-  
-  
-}
-.navbar{
-  height:140px;
-}
-.nav-item{
-  padding: 30px;
-}
+
+
+
+
 
 .versie{
   text-align: center;
-  margin-top:3%;
+  margin-top:2%;
   
 }
-.footer{
-  margin-top:25.2%;
+@media only screen and (min-width: 900px) {
+  .footer{
+  
   text-align:center;
-  padding: 1.3% 4%;
+  padding: 2% 1%;
+  position: relative;
+  top:550px;
+  
   
 }
+
+
+}
+@media only screen and (max-width: 899px) {
+  .footer{
+  
+  text-align:center;
+  padding: 2% 1%;
+  position: relative;
+  top: 350px;
+
+  
+  
+}
+
+
+}
+
+
 .footer-link{
  
   color:green; 
-  padding:8% 7%;
-  
+  padding: 4% 3%;
   
 
 }
+.nav-link{
+  font-size:1.3rem;
+}
+
 .footer-link:hover{
   color:black;
 }
@@ -74,84 +102,106 @@ i{
 }
 
 
+
+
+.logo{
+  width:70%;
+  
+}
+
+nav{
+    position: relative;
+    top: 18px;
+  }
+  #logout{
+    height:60px;
+  }
+
+
+
       </style>
+
+ 
     
 
     </head>
   <body class="bg-warning">
-  <div class="container-fluid">
-    <?php echo  '<center>'.SuccessMessage().'</center>'; ?>
-   
+  <div class="container-fluid h-100">
+
+  <div class="row">
+  <div class="col-12">
+ 
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning ml-auto">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"  aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#"><img  class="logo" src="../images/Logo.png"></a>
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0 pr-5">
+      <li class="nav-item">
+        <a class="nav-link text-success font-weight-bold" href="boeken.php">Reservering boeken <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-success font-weight-bold" href="reserveringOverzicht.php">Reservering overzicht</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-success font-weight-bold" href="r_home.php">Home</a>
+      </li>
+      <li class="nav-item">
+        <button class="btn btn-bg bg-danger  text-light  font-weight-bold" onclick="window.location.href='../include/logout.inc.php';" id="logout"><i class='fas fa-sign-out-alt'></i><br> Loguit</button>
+      </li>
+    
+    </ul>
+    
+  </div>
+</nav>
+   </div>
+   </div>
     
 
 <!-- Nav Bar -->
 
-<div class="row">
-  <div class="col-12 ">
-<nav class="navbar navbar-expand-lg bg-warning">
-  <a class="navbar-brand" href="#"><img src="../images/Logo.png" style="height:150px;"/></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse"  id="navbarToggle">
-
-    <ul class="navbar-nav ml-auto mt-0" id="nav-Items">
-
-      <li class="nav-item">
-        <a class="nav-link  text-success font-weight-bolder" href="boeken.php">Reservering boeken</a>
-      </li>
+   
     
-      <li class="nav-item">
-        <a class="nav-link text-success font-weight-bolder" href="reserveringOverzicht.php">Reservering overzicht</a>
-      </li>
-      <li class="nav-item">
-      <a class="nav-link" href="../include/logout.inc.php"><button  type="button"   class="btn btn-outline-dark"><i class="fas fa-sign-out-alt"></i>Logout</button></a>
-      </li>
+
+
+      
      
-  </div>
-  
-
-</nav>
-    </div>
-    </div>
-    <div class="datum">
-    <div class="row m-auto bg-dark text-center">
-      <div class="offset-md-4 col-md-4 offset-md-4">
-        <form>
-      <div class="form-group">
-    <label>Beschikbare dagen</label>
-    <input type="date" class="form-control bg-light text-dark" id="exampleInputEmail1" aria-describedby="emailHelp">
-      </form>
+    <div class="row">
+    <div class="col-12">
+    
+    <?php echo '<center>'.SuccessMessage().'</center>'; ?>
+    
     </div>
     
     </div>
 
+    
 
-      </div>
-    </div>
-    <div class="footer bg-warning">
-  <footer>
-    <a class="footer-link" href="https://www.linkedin.com/in/marcel-abu-samra-ba082615"><i class="fab fa-linkedin-in fa-3x"></i></a>
-    <a class="footer-link" href="https://www.instagram.com/marcelo_abusamra/?hl=nl"><i class="fab fa-instagram fa-3x"></i></a>
-    <a class="footer-link" href="https://www.facebook.com/marcel.abusamra"> <i class="fab fa-facebook-square fa-3x"></i></a>
-    <p class="versie text-muted">© Copyright 2020 La Rustique Camping</p>
-
-  </footer>
-  </div>
 
    
     </div>
+    
 
 <!-- Title -->
 
-
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+     
 
   
     
        
 
-    
+<script>
+ 
+
+      </script>
         
       
    

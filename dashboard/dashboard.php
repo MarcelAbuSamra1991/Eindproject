@@ -1,4 +1,8 @@
-<?php include_once '../include/login_admin.inc.php'?>
+<?php include_once '../include/login_admin.inc.php';
+  $_SESSION["TrackingURL"]= $_SERVER["PHP_SELF"];
+  varificatie();
+?>
+
 
 
 
@@ -37,26 +41,31 @@
               <h3 class="text-white mt-3">Dashboard</h3>
                 <div class="collapse navbar-collapse">
                     <ul class="flex-md-column  flex-sm-row   navbar-nav w-100 justify-content-between">
-                        
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="../Momgeving/signup_medewerker.php"><i class="fas fa-check"></i><span class="d-inline"> Medewerker toeveogen</span></a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link pl-0" href="#"><i class="fas fa-user-plus"></i><span class="d-inline"> Admins</span></a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="#"><i class="fas fa-user"></i> <span class="d-inline"> Medewerkers</span></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="#"><i class="fas fa-check"></i><span class="d-inline"> Reserveringen</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link pl-0" href="#"><i class="fas fa-euro-sign"></i><span class="d-inline"> Omzet</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link pl-0" href="#"><i class="fas fa-user"></i> <span class="d-inline"> Medewerkers</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pl-0" href="#"><i class="fas fa-check"></i><span class="d-inline"> Reserveringen</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pl-0" href="../include/logout.inc.php"><i class="fas fa-sign-out-alt"></i> <span class="d-md-inline">Logout</span></a>
+                            <a class="nav-link pl-0" href="../include/logoutadmin.inc.php"><i class="fas fa-sign-out-alt"></i> <span class="d-md-inline">Logout</span></a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </aside>
+        <!--<li><input class="btn btn-block btn-light text-success"  type="button" onclick="location.href='Momgeving/signup_medewerker.php';" value="Medewerker Registreren"/></li>-->
         <main class="col bg-faded py-3 flex-md-grow-1 bg-success">
             <h2>Dashboard</h2>
             <p>

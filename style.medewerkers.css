@@ -57,7 +57,7 @@ input[type="submit"]{
    
     
     height:auto;
-    width: 100%;
+   width:100%;
     font-size:1.2rem;
     margin-top:10px;
     margin-bottom:10px;
@@ -82,3 +82,63 @@ input[type="submit"]{
 
 
 /*reservering form*/
+    /* <?php
+
+$pdo = new Db();
+$pdo = $pdo->connect();
+
+$query="SELECT * FROM klant INNER JOIN 
+reservering ON klant.klantid = reservering.klantid  ORDER BY reservering.reserveringdatum DESC";
+
+$query_run = $pdo->query($query);
+?>
+      
+       <div class="row">
+         <div class="col-md-12">
+         
+         <table class='table table-hover bg-light table table-striped mt-3' id="rOverzicht">
+        <thead class='bg-info text-light'>
+          <tr>
+            <td>ID</td>
+            <td>Voornaam</td>
+            <td>Achternaam</td>
+            <td>Reserveringnr</td>
+            <td>Reservering datum</td>
+            <td>Aankomstdatum</td>
+            <td>Vertrekdatum</td>
+            <td> Wijzigen</td>
+            <td>Annuleren</td>
+          </tr>
+        </thead>
+        <tbody>
+      
+
+
+
+
+
+
+<?php  while($row=$query_run->fetch(PDO::FETCH_OBJ)){?>
+    <tr class="text-success font-weight-bold">
+    <td><?=$row->klantid?></td>
+    <td><?= $row->voornaam?></td>
+     <td><?=$row->achternaam?></td>
+    <td><?=$row->reserveringnr?></td>
+    <td><?=$row->reserveringdatum?></td>
+    <td><?=$row->aankomstdatum?></td>
+     <td><?=$row->vertrekdatum?></td></tr>
+<?php
+}
+?>
+
+
+
+
+
+
+
+
+
+
+</tbody>
+</table>*/

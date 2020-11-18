@@ -1,3 +1,10 @@
+<?php
+include "include/sessions.php";
+
+    
+ 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +24,7 @@
  <div class="container">
     <div class="nav-m">
         <ul>
-            <li><input class="btn btn-block btn-light text-success"  type="button" onclick="location.href='Momgeving/signup_medewerker.php';" value="Medewerker Registreren"/></li>
+            
             <li><input class="btn btn-block btn-light text-success" type="button" onclick="location.href='Momgeving/login_medewerker.php';" value="Medewerker Inloggen" /></li>
             <li><input class="btn btn-block btn-light text-success" type="button" onclick="location.href='Momgeving/login_admin.php';" value="Admin Dashboard" /></li>
             

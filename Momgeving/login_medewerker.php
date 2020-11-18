@@ -1,4 +1,9 @@
-<?php include_once '../include/login_medewerker.inc.php'?>
+<?php include_once '../include/login_medewerker.inc.php';
+       
+   
+       ?>
+       
+
 
 
 <!DOCTYPE html>
@@ -32,7 +37,7 @@
     <input type="password" class="form-control" name="password" id="Password" placeholder="voer je wachtwoord in">
   </div>
   <div class="form-group">
-    <input type="submit" name="submit-login-m" class="btn btn-success btn btn-lg"  value="Login">
+    <input type="submit" name="submit-login-m" class="btn btn-success btn btn-lg" style="width:100%;"  value="Login">
   </div>
   <div class="pb-2 text-center">
   

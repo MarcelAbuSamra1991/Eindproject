@@ -36,7 +36,7 @@
     <input type="password" class="form-control" name="password" id="Password" placeholder="voer wachtwoord in">
   </div>
   <div class="form-group">
-    <input type="submit" name="submit-login" class="btn btn-success btn btn-lg"  value="Login">
+    <input type="submit" name="submit-login" class="btn btn-success btn btn-lg"  style="width:100%;"  value="Login">
   </div>
   
     

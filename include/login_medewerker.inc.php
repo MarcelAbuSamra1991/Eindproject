@@ -1,11 +1,12 @@
 <?php
-include_once '../classes/dbc.php';
-include_once ('sessions.php');
-include_once 'functions.php';
+include '../classes/dbc.php';
+include 'sessions.php';
+include 'functions.php';
 ?>
 <?php
 if(isset($_POST["submit-login-m"])){
- $pdo = Db::connect();
+    $pdo = new Db();
+    $pdo = $pdo->connect();
  $voornaam = $_POST["voornaam"];
  $wachtwoord = hashWachtwoord($_POST["password"]);
  if(empty($voornaam)||empty($wachtwoord)){
@@ -15,7 +16,13 @@ if(isset($_POST["submit-login-m"])){
  }
  elseif(loginMedewerker($pdo,$voornaam,$wachtwoord)){
      $_SESSION["SuccessMessage"] = "Welcome ".$voornaam;
+     $_SESSION["authentication"] = true;
+     if(isset($_SESSION["TrackingURL"])){
+         header("Location:".$_SESSION["TrackingURL"]);
+     }
+     else{
     header("Location:../reservering/r_home.php");
+     }
  }
 
  else{
@@ -37,6 +44,7 @@ if(isset($_POST["submit-login-m"])){
         $query->bindParam(":wachtwoord",$wachtwoord);
          $query->execute();
          if($query->rowCount() == 1){
+            
              return true;
          }
          else{
@@ -44,6 +52,7 @@ if(isset($_POST["submit-login-m"])){
          }
 
  }
+ 
  
 
 

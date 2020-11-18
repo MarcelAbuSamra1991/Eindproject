@@ -5,7 +5,9 @@ include_once ('functions.php');
 include_once ('sessions.php');
 if(isset($_POST['submit-signup']))
 {
-    $pdo = Db::connect();
+   // $pdo = Db::connect();
+    $pdo = new Db();
+    $pdo->connect();
     $voornaam = desinfectieString($_POST["voornaam"]);
     $achternaam = desinfectieString($_POST["achternaam"]);
     $soort = $_POST["soort"];
@@ -26,7 +28,7 @@ if(isset($_POST['submit-signup']))
 }
     function invoerMedewerker($pdo,$voornaam,$achternaam,$soort,$email,$wachtwoord)
     {   
-        $query = $pdo->prepare("
+        $query = $pdo->connect()->prepare("
         INSERT INTO medeadmin(voornaam,achternaam,soort,email,wachtwoord)
         VALUES(:voornaam,:achternaam,:soort,:email,:wachtwoord)
         ");

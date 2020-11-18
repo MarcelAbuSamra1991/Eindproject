@@ -29,7 +29,7 @@
     <input type="password" class="form-control" name="password" id="Password" placeholder="herhaal je wachtwoord in">
   </div>
   <div class="form-group">
-    <input type="submit" name="submit-wachtwoord-verzoek" class="btn btn-success btn btn-lg"  value="Verzenden">
+    <input type="submit" name="submit-wachtwoord-verzoek"  style="width:100%;" class="btn btn-success btn btn-lg"  value="Verzenden">
   </div>
   <div class="pb-2 text-center">
   

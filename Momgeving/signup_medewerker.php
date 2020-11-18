@@ -22,13 +22,17 @@
   </head>
 <body style="background-color:#ffcc00">
 
+
+  
+  
+ 
 <div class="container sub-container">
   
   
   <?php echo  '<center>'.SuccessMessage().'</center>'; ?>
   <?php echo '<center>'.ErrorMessage().'</center>';?>
   
-
+  
 <h1>Medewerker aanmelden</h1>
 <form method="post" action="../include/signup_medewerker.inc.php" >
 
