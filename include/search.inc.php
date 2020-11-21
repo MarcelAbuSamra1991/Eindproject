@@ -32,6 +32,7 @@ if($query_run->rowCount()){
             <td> Wijzigen</td>
             <td>Annuleren</td>
             <td>Factuur</td>
+            <td>Betaling</td>
           </tr>
         </thead>
         </tbody>";
@@ -59,6 +60,11 @@ if($query_run){
                 <td><form action='../fpdf/factuur.inc.php' method='get'>
                 <input type='hidden' name='verstopt' value='$row->reserveringnr'>
                 <button class='btn btn-sm btn-warning' type = 'submit' name='Factuur'>Factuur</button>
+            </form></td>
+
+               <td><form action='../include/betaling.inc.php' method='get'>
+                <input type='hidden' name='verstopt' value='$row->reserveringnr'>
+                <button class='btn btn-sm btn-primary' type = 'submit' name='Factuur'>Betaald</button>
             </form></td></tr>";
     
      
@@ -70,7 +76,7 @@ $output .= "</tbody></table></div>";
 echo $output;
 }
 else{
-  echo "<h2 class='text-danger p-2 bg-dark font-weight-bold'>Geen records gevonden</h2>";
+  echo "<h2 class='text-danger p-2 bg-light font-weight-bold' style='opacity:0.7;'>Geen records gevonden</h2>";
 }
 
 

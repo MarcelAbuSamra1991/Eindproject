@@ -12,18 +12,18 @@
 </head>
 <body>
 
-        <form>
-          <input type="text" id="search"   name="Search" placeholder="Search ..." class="w-100 border-success" style="height:40px;">
+        <form method="POST" action="test.php">
+          <input type="text" id="search"   name="random1" placeholder="Search ..." class="w-100 border-success" style="height:40px;">
+          <input type="text" id="search"   name="random2" placeholder="Search ..." class="w-100 border-success" style="height:40px;">
+          <input type="text" id="search"   name="random3" placeholder="Search ..." class="w-100 border-success" style="height:40px;">
+          <input type="submit" value="submit" name="submit">
          </form> 
          <div id ="overzicht">
          </div>
          
   
-   <script>
-      
-        
-    
-     </script>
+  
+?>
 
 </body>
 </html>

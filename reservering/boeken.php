@@ -154,13 +154,13 @@ numInputs.forEach(function(input) {
         </div>
     <div class="col-md-4">
   <div class="form-group">
-    <label for="aankomst">aankomst datum</label> <span class="ster">*</span>
+    <label for="aankomst">Aankomst datum</label> <span class="ster">*</span>
     <input type="date" class="form-control" id="aankomst" name="aankomstdatum" value="<?php echo($date->format('Y-m-d')); ?>">
   </div>
     </div>
     <div class="col-md-4">
     <div class="form-group">
-    <label for="vertrek">vertrek datum</label> <span class="ster">*</span>
+    <label for="vertrek">Vertrek datum</label> <span class="ster">*</span>
     <input type="date" class="form-control" id="vertrek" name="vertrekdatum" value="<?php $date->add(new DateInterval('P2W')); echo($date->format('Y-m-d')); ?>">
     </div>
     </div>
@@ -215,7 +215,7 @@ numInputs.forEach(function(input) {
   <div class="col-md-2 col-6">
   <div class="form-group">
     <label for="huisdier">Huisdier</label>
-    <input type="number" class="form-control" id="huisdier" name="huisdier" min="0">
+    <input type="number" class="form-control" id="huisdier" name="huisdier" min="0" max="1">
   </div>
 </div>
   </div>
@@ -269,7 +269,7 @@ numInputs.forEach(function(input) {
 <div class="col-md-2 col-6">
   <div class="form-group">
     <label for="parkeer">Parkeer</label>
-    <input type="number" class="form-control" id="parkeer" name="parkeer" min="0">
+    <input type="number" class="form-control" id="parkeer" name="parkeer" min="0" max="2">
   </div>
   </div>
 

@@ -83,6 +83,14 @@ if(isset($_POST["submit-boeking"]))
  $query2->execute([$last,$plaatsid,$aankomstdatum,$vertrekdatum]); 
  $lastReserveringId = $pdo->lastInsertId();
 
+ $queryBetalingStatus= $pdo->prepare("
+ INSERT INTO betaling(reserveringnr,state)VALUES(?,?) 
+    ");
+ 
+
+ $queryBetalingStatus->execute([$lastReserveringId,"onvoltooid"]); 
+
+
 
 
  if(!empty($volwassene)){

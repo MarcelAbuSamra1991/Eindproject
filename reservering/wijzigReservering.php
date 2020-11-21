@@ -336,7 +336,7 @@ if($query_run){
   <div class="col-md-2 col-6">
   <div class="form-group">
     <label for="huisdieren">Huisdier</label>
-    <input type="number" class="form-control" id="huisdieren" name="huisdier" min="0"  value="<?php
+    <input type="number" class="form-control" id="huisdieren" name="huisdier" min="0" max="1"  value="<?php
      $query2 = "SELECT * FROM voorzieningen WHERE reserveringnr = '{$_SESSION['reserveringnr']}' AND optienr=4";
      $query_run2 = $pdo->query($query2);
        if($query_run2){
@@ -492,7 +492,7 @@ if($query_run){
 <div class="col-md-2 col-6">
   <div class="form-group">
     <label for="parkeer">Parkeer</label>
-    <input type="number" class="form-control" id="parkeer" name="parkeer" min="0" value="<?php
+    <input type="number" class="form-control" id="parkeer" name="parkeer" min="0" max="2" value="<?php
     
     $query2 = "SELECT * FROM voorzieningen WHERE reserveringnr = '{$_SESSION['reserveringnr']}'AND optienr=10";
     $query_run2 = $pdo->query($query2);

@@ -8,7 +8,7 @@ if(isset($_POST["submit-login"])){
  $pdo = new Db();
  $pdo = $pdo->connect();
  $voornaam = $_POST["voornaam"];
- $wachtwoord = hashWachtwoord($_POST["password"]);
+ $wachtwoord = $_POST["password"];
  if(empty($voornaam)||empty($wachtwoord)){
      $_SESSION["ErrorMessage"]= "Vul alle velden in";
      header("Location: ../Momgeving/login_admin.php");

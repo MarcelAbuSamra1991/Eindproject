@@ -15,9 +15,7 @@
   
    </style>
      <body>
-     <div class='container'>
-     <div class='row'>
-     <div class='col-md-12'>
+     
      <div class='table-responsive'>
 <table class='table table-hover bg-light table table-bordered mt-3 text-center'>
         <thead class='bg-dark text-light'>
@@ -32,6 +30,7 @@
             <td> Wijzigen</td>
             <td>Annuleren</td>
             <td>Factuur</td>
+            <td>Betaling</td>
           </tr>
         </thead>
       
@@ -70,7 +69,13 @@ while($row=$query_run->fetch(PDO::FETCH_OBJ)){
 <td><form action='../fpdf/factuur.inc.php' method='get'>
 <input type='hidden' name='verstopt' value='$row->reserveringnr'>
 <button class='btn btn-sm btn-warning' type = 'submit' name='factuur'>Factuur</button>
+</form></td>
+
+<td><form action='../include/betaling.inc.php' method='get'>
+<input type='hidden' name='verstopt' value='$row->reserveringnr'>
+<button class='btn btn-sm btn-primary' type = 'submit' name='betaald'>Betaald</button>
 </form></td></tr>";
+
 
 
 }
@@ -89,8 +94,7 @@ else{
 ?>
 </table>
 </div>
-</div>
-</div>
+
 
 
 </body>

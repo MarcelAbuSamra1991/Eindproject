@@ -23,6 +23,7 @@
   </head>
 <body style="background-color:#ffcc00">
 <div class="container sub-container-login">
+
     <?php echo '<center>'.ErrorMessage().'</center>'; ?>
 <h1>Login Admin</h1>
 <form class="sub-form" action="../include/login_admin.inc.php" method="post">

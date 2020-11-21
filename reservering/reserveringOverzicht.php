@@ -104,7 +104,7 @@ include_once '../include/login_medewerker.inc.php';
 
       </div>
 
-    <div class="container" style="margin-top:40px;">
+    <div class="container-fluid" style="margin-top:40px;">
     <div class="row">
     <div class="offset-md-2 col-md-8 text-center offset-md-2 pb-3">
     <h2 class="text-light" style="font-family:Bungee Shade;">Reserveringen overzicht</h2>
@@ -112,7 +112,7 @@ include_once '../include/login_medewerker.inc.php';
     </div>
     
       <div class="row mt-3">
-        <div class="col-md-10">
+        <div class="offset-md-2 col-md-6">
         
         <div class="form-group">
           
@@ -131,8 +131,6 @@ include_once '../include/login_medewerker.inc.php';
           </div>
 
       
-         
-
 
 
 
@@ -142,7 +140,7 @@ include_once '../include/login_medewerker.inc.php';
 
 
        <div class="row">
-         <div class="col-md-12">
+         <div class="offset-md-2 col-md-8 offset-md-2 col-12">
          <div id="overzicht">
          <div class='table table-responsive'>
          <table class='table table-hover bg-light table table-bordered mt-3 text-center' id="rOverzicht">
@@ -153,11 +151,13 @@ include_once '../include/login_medewerker.inc.php';
             <td>Achternaam</td>
             <td>Reserveringnr</td>
             <td>Reservering datum</td>
+
             <td>Aankomstdatum</td>
             <td>Vertrekdatum</td>
             <td> Wijzigen</td>
             <td>Annuleren</td>
             <td>Factuur</td>
+            <td>Betaling</td>
           </tr>
         </thead>
 
@@ -193,7 +193,13 @@ while($row=$query_run->fetch(PDO::FETCH_OBJ)){
   <td><form action='../fpdf/factuur.inc.php' method='get'>
 <input type='hidden' name='verstopt' value='$row->reserveringnr'>
 <button class='btn btn-sm btn-warning' type = 'submit' name='Factuur'>Factuur</button>
+</form></td>
+
+  <td><form action='../include/betaling.inc.php' method='get'>
+<input type='hidden' name='verstopt' value='$row->reserveringnr'>
+<button class='btn btn-sm btn-primary' type = 'submit' name='betaald'>Betaald</button>
 </form></td></tr>";
+
 
  
 
@@ -263,6 +269,12 @@ $(document).ready(function(){
         $('#overzicht').load('../include/reserveringOverzicht.inc.php');
       });
     });   
+    $(document).ready(function(){
+      $('#BetaaldBtn').click(function(){
+        $('#overzicht').load('../include/reserveringOverzicht.inc.php');
+      });
+    });   
+    
     
      </script>
 

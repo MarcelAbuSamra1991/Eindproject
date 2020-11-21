@@ -15,7 +15,7 @@
   $pdo = new Db();
   $pdo = $pdo->connect();
   if(isset($_GET['verstopt'])){
-      $_SESSION['reserveringnr'] = $_GET['verstopt'];
+      $_SESSION['id'] = $_GET['verstopt'];
     }
 
 
@@ -101,7 +101,7 @@
          <div class="col-md-12 col-12">
 
              <div class="title">
-                 <h1 class="text-center mt-5"><span id="title">Annuleren reservering<span></h1>
+                 <h1 class="text-center mt-5"><span id="title">Verwijder medewerker<span></h1>
             </div>
         </div> 
         </div>
@@ -111,12 +111,12 @@
    <div class="col-md-12">
    <?php echo '<center>'.ErrorMessage().'</center>'; ?>
      <?php echo '<center>'.SuccessMessage().'</center>'; ?>
-      <form method="post" action="../include/annuleerReservering.inc.php">
+      <form method="post" action="verwijderPersoneel.inc.php">
       <div class="row">
    <div class="offset-md-4 col-md-4 offset-md-4">
       <div class="form-group"> 
-    <label for="Reserveringnr" class="text-dark">Reservering nummer</label>
-    <input type="text" class="form-control text-center bg-light" id="Reserveringnr" name="reserveringnr" readonly value="<?php echo $_SESSION['reserveringnr'];?>">
+    <label for="ID" class="text-dark">ID</label>
+    <input type="text" class="form-control text-center bg-light" id="ID" name="id" readonly value="<?php echo $_SESSION['id'];?>">
       </div>
       </div>
       </div>
@@ -131,10 +131,10 @@
             <td>ID</td>
             <td>Voornaam</td>
             <td>Achternaam</td>
-            <td>Reserveringnr</td>
-            <td>Reservering datum</td>
-            <td>Aankomstdatum</td>
-            <td>Vertrekdatum</td>
+            <td>Soort</td>
+            <td>Email</td>
+            <td>Wachtwoord</td>
+       
             
           </tr>
         </thead>
@@ -143,20 +143,19 @@
 
 
 
-$query="SELECT * FROM klant INNER JOIN 
-reservering ON klant.klantid = reservering.klantid 
- WHERE reservering.reserveringnr = '$_SESSION[reserveringnr]'";
+$query="SELECT * FROM medeadmin WHERE id = '{$_SESSION['id']}'";
+
 
 $query_run = $pdo->query($query);
 if($query_run){
 while($row=$query_run->fetch(PDO::FETCH_OBJ)){
-    echo '<tr class="text-dark font-weight-bold"><td>'.$row->klantid.'</td>';
+    echo '<tr class="text-dark font-weight-bold"><td>'.$row->id.'</td>';
     echo '<td>'.$row->voornaam.'</td>';
     echo '<td>'.$row->achternaam.'</td>';
-    echo '<td>'.$row->reserveringnr.'</td>';
-    echo '<td>'.$row->reserveringdatum.'</td>';
-    echo '<td>'.$row->aankomstdatum.'</td>';
-    echo '<td>'.$row->vertrekdatum.'</td></tr>';
+ 
+    echo '<td>'.$row->soort.'</td>';
+    echo '<td>'.$row->email.'</td>';
+    echo '<td>'.$row->wachtwoord.'</td></tr>';
     
 
 }
@@ -189,15 +188,15 @@ while($row=$query_run->fetch(PDO::FETCH_OBJ)){
         
        <div class="row">
         <div class="col-md-12 col-sm-12">
-          <h2 class="text-center text-light font-weight-bold p-2"> Weet je het zeker dat je deze boeking wilt aanuleren?</h2>
+          <h2 class="text-center text-light font-weight-bold p-2"> Weet je het zeker dat je deze medewerker wilt verwijderen?</h2>
         </div>
        </div>
        <div class="row">
         <div class="col-md-6 col-sm-6">
-          <input type="submit" name="submit-annuleren" class="btn btn-lg bg-danger text-light font-weight-bold" value="JA"> 
+          <input type="submit" name="submit-verwijder" class="btn btn-lg bg-danger text-light font-weight-bold" value="JA"> 
         </div>
         <div class="col-md-6 col-sm-6">
-        <input type="button" id="terug" class="btn btn-lg bg-info text-light font-weight-bold w-100 text-center" value="Terug" onclick="window.location.href='reserveringOverzicht.php';"> 
+        <input type="button" id="terug" class="btn btn-lg bg-info text-light font-weight-bold w-100 text-center" value="Terug" onclick="window.location.href='PersoneelOverzicht.php';"> 
         </div>
        </div>
        </form>

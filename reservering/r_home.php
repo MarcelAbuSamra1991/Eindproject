@@ -81,7 +81,47 @@
 
 
 }
+@media only screen and (min-width: 899px) {
+  .title{
+    margin-top: 190px;
+  
+    opacity:0.6 
 
+  
+  
+}
+
+
+}
+@media only screen and (max-width:900px) {
+  h1{
+   
+    padding-top: 20px;
+    height: 75px;
+    font-size: 1.2rem;
+    
+  
+}
+
+
+}
+@media only screen and (max-width: 899px) {
+  .title{
+   
+  
+    opacity:0.6 ;
+    margin-top: 110px;
+    width:100%;
+  
+  opacity:0.6 
+
+
+  
+  
+}
+
+
+}
 
 .footer-link{
  
@@ -176,8 +216,13 @@ nav{
     </div>
     
     </div>
-
-    
+    <div class="container title  bg-dark"   >
+    <div class="row">
+        <div class="col-12">
+            <h1 class="font-weight-bold text-light" style="height: 200px; padding-top: 80px;">Personeel omgeving! Hier kunt u een boeking invoeren, wijzigen of verwijderen voor klanten</h1>
+</div>
+</div>
+</div>
 
 
    
@@ -192,15 +237,13 @@ nav{
   crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  
-     
-
-  
+   
     
        
 
 <script>
  
-
+ 
       </script>
         
       

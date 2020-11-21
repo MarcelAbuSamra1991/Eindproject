@@ -20,6 +20,11 @@
     <title>Signup pagina</title>
     <link  rel="stylesheet" href="../style.medewerkers.css" type="text/css">
   </head>
+  <style>
+    .sub-container{
+    margin-top: 100px;
+}
+    </style>
 <body style="background-color:#ffcc00">
 
 
@@ -34,7 +39,7 @@
   
   
 <h1>Medewerker aanmelden</h1>
-<form method="post" action="../include/signup_medewerker.inc.php" >
+<form method="post" action="../include/signup_medewerker.inc.php">
 
   <div class="form-group">
     <label for="Voornaam">Voornaam</label>
@@ -60,10 +65,20 @@
     <label for="Password">Wachtwoord</label>
     <input type="password" class="form-control" name="wachtwoord" id="Password" placeholder="voer wachtwoord in">
   </div>
-
+  <div class="row">
+    <div class="col-md-6 col-12">
   <div class="form-group">
     <input type="submit" name="submit-signup" class="btn btn-success btn btn-lg"  value="Verzenden">
   </div>
+</div>
+  <div class="col-md-6 col-12">
+  <div class="form-group">
+    <input type="button"  onclick="location.href='../dashboard/dashboard.php'"   class="btn btn-danger btn btn-lg w-100" style="position:relative; top:9px;" value="Terug">
+  </div>
+</div>
+</div>
+
+
 
   
     
